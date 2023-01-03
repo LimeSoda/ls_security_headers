@@ -1,0 +1,24 @@
+{
+    "name": "limesoda-com/ls-security-headers",
+    "type": "typo3-cms-extension",
+    "description": "Configures security headers like content security policy",
+    "keywords": [
+        "TYPO3 CMS",
+        "extension",
+        "LIMESODA",
+        "Security Headers"
+    ],
+    "require": {
+        "typo3/cms-core": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "LimeSoda\\LsSecurityHeaders\\": "Classes"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "ls_security_headers"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+#
+# Ignore testing build fragments
+/.Build/
+/composer.lock
+
+#
+# Ignore by common IDEs used directories/files
+nbproject
+*.idea
