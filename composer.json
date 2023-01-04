@@ -1,7 +1,9 @@
 {
     "name": "limesoda-com/ls-security-headers",
-    "type": "typo3-cms-extension",
     "description": "Configures security headers like content security policy",
+    "type": "typo3-cms-extension",
+    "homepage": "https://www.limesoda.com",
+    "license": ["GPL-2.0-or-later"],
     "keywords": [
         "TYPO3 CMS",
         "extension",
