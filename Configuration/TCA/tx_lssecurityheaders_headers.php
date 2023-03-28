@@ -10,7 +10,7 @@ return [
         'label_userFunc' => \LimeSoda\LsSecurityHeaders\Userfuncs\Tca::class . '->securityHeaderTitle',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
-        'cruser_id' => 'cruser_id',
+        'cruser_id' => 'cruser_id', // @TODO remove for Typo3 13 as it's no longer evaluated
         'title' => $lll . 'tx_lssecurityheaders_headers',
         'delete' => 'deleted',
         'versioningWS' => false,
@@ -92,6 +92,7 @@ return [
             ]
         ],
         'starttime' => [
+            // @TODO migrate to datetime field for Typo3 13
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
             'config' => [
                 'type' => 'input',
@@ -104,6 +105,7 @@ return [
             ]
         ],
         'endtime' => [
+            // @TODO migrate to datetime field for Typo3 13
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
             'config' => [
                 'type' => 'input',
