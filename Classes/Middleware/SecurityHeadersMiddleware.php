@@ -67,12 +67,15 @@ class SecurityHeadersMiddleware implements MiddlewareInterface
                 $securityHeaders["content_security_policy"]
             );
             foreach ($contentSecurityPolicy as $key => $value) {
+                foreach ($GLOBALS['LS_SECURITY_HEADERS']['CSP_NONCE'][preg_split("/[[:upper:]]/u", $key)[0]] ?? [] as $nonce) {
+                    $value .= $value ? " 'nonce-{$nonce}'" : "'nonce-{$nonce}'";
+                }
                 if ($value) {
                     $contentSecurityPolicies[] = str_replace(
-                            '_',
-                            '-',
-                            GeneralUtility::camelCaseToLowerCaseUnderscored($key)
-                        ) . ' ' . $value;
+                        '_',
+                        '-',
+                        GeneralUtility::camelCaseToLowerCaseUnderscored($key)
+                    ) . ' ' . $value;
                 }
             }
             if (!empty($contentSecurityPolicies)) {
