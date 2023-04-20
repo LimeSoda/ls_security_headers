@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace LimeSoda\ProjectBase\ViewHelpers\Csp;
+namespace LimeSoda\LsSecurityHeaders\ViewHelpers\Csp;
 
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
