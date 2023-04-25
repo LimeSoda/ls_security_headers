@@ -25,7 +25,7 @@ Basic usage:
 <style nonce="{f:cObject(typoscriptObjectPath: 'lib.cspNonce', data: {length: '32', policy: 'style'})}">
 ```
 The policy argument defines the policy the nonce should be added to (style for style-src, script for script-src, ...).<br>
-The length argument defines the length of the nonce in bytes (default is 32).
+The length argument defines the length of the nonce in bytes.
 
 ## Ressources
 
