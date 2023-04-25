@@ -1,0 +1,13 @@
+# ==============================================
+# TypoScript object for generating nonces
+# ==============================================
+
+lib.cspNonce = USER_INT
+lib.cspNonce {
+    userFunc = LimeSoda\LsSecurityHeaders\Userfuncs\Csp->generateNonce
+
+    length = TEXT
+    length.field = length
+    policy = TEXT
+    policy.field = policy
+}
