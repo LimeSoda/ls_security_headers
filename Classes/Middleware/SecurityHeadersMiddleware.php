@@ -37,40 +37,42 @@ class SecurityHeadersMiddleware implements MiddlewareInterface
         $response = $handler->handle($request);
 
         $site = $request->getAttribute('site');
+
         if (!$site instanceof Site) {
             return $response;
         }
 
         $securityHeaders = $this->getSecurityHeadersBySite($site->getRootPageId());
 
-        if (isset($securityHeaders["referrer_policy"])) {
+        if (!empty($securityHeaders["referrer_policy"])) {
             $response = $response->withHeader('Referrer-Policy', $securityHeaders["referrer_policy"]);
         }
 
-        if (isset($securityHeaders["http_strict_transport_security"])) {
+        if (!empty($securityHeaders["http_strict_transport_security"])) {
             $response = $response->withHeader(
                 'Strict-Transport-Security',
-                $securityHeaders["http_strict_transport_security"]
+                $securityHeaders["http_strict_transport_security"],
             );
         }
 
-        if (isset($securityHeaders["x_frame_options"])) {
+        if (!empty($securityHeaders["x_frame_options"])) {
             $response = $response->withHeader('X-Frame-Options', $securityHeaders["x_frame_options"]);
         }
 
-        if (isset($securityHeaders["x_xss_protection"])) {
+        if (!empty($securityHeaders["x_xss_protection"])) {
             $response = $response->withHeader('X-Xss-Protection', $securityHeaders["x_xss_protection"]);
         }
 
         if (isset($securityHeaders["content_security_policy"])) {
-            $contentSecurityPolicy = $this->flexFormService->convertFlexFormContentToArray(
-                $securityHeaders["content_security_policy"]
-            );
+            $contentSecurityPolicy = $this->flexFormService
+                ->convertFlexFormContentToArray($securityHeaders["content_security_policy"]);
+
             foreach ($contentSecurityPolicy as $key => $value) {
                 foreach ($GLOBALS['LS_SECURITY_HEADERS']['CSP_NONCE'][preg_split("/[[:upper:]]/u", $key)[0]] ?? [] as $nonce) {
                     $value .= $value ? " 'nonce-{$nonce}'" : "'nonce-{$nonce}'";
                 }
-                if ($value) {
+
+                if (!empty($value)) {
                     $contentSecurityPolicies[] = str_replace(
                         '_',
                         '-',
@@ -78,24 +80,26 @@ class SecurityHeadersMiddleware implements MiddlewareInterface
                     ) . ' ' . $value;
                 }
             }
+
             if (!empty($contentSecurityPolicies)) {
                 $response = $response->withHeader('Content-Security-Policy', implode('; ', $contentSecurityPolicies));
             }
         }
 
         if (isset($securityHeaders["permissions_policy"])) {
-            $permissionsPolicy = $this->flexFormService->convertFlexFormContentToArray(
-                $securityHeaders["permissions_policy"]
-            );
+            $permissionsPolicy = $this->flexFormService
+                ->convertFlexFormContentToArray($securityHeaders["permissions_policy"]);
+
             foreach ($permissionsPolicy as $key => $value) {
-                if ($value) {
+                if (!empty($value)) {
                     $permissionsPolicies[] = str_replace(
-                            '_',
-                            '-',
-                            GeneralUtility::camelCaseToLowerCaseUnderscored($key)
-                        ) . "=($value)";
+                        '_',
+                        '-',
+                        GeneralUtility::camelCaseToLowerCaseUnderscored($key)
+                    ) . "=($value)";
                 }
             }
+
             if (!empty($permissionsPolicies)) {
                 $response = $response->withHeader('Permissions-Policy', implode(', ', $permissionsPolicies));
             }
