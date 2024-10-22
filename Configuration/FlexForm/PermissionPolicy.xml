@@ -8,202 +8,166 @@
                 <type>array</type>
                 <el>
                     <accelerometer>
-                        <TCEforms>
-                            <label>accelerometer</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.accelerometer.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>accelerometer</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.accelerometer.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </accelerometer>
                     <ambientLightSensor>
-                        <TCEforms>
-                            <label>ambient-light-sensor</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.ambient-light-sensor.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>ambient-light-sensor</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.ambient-light-sensor.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </ambientLightSensor>
                     <autoplay>
-                        <TCEforms>
-                            <label>autoplay</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.autoplay.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>autoplay</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.autoplay.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </autoplay>
                     <camera>
-                        <TCEforms>
-                            <label>camera</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.camera.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>camera</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.camera.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </camera>
                     <encryptedMedia>
-                        <TCEforms>
-                            <label>encrypted-media</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.encrypted-media.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>encrypted-media</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.encrypted-media.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </encryptedMedia>
                     <fullscreen>
-                        <TCEforms>
-                            <label>fullscreen</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.fullscreen.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>fullscreen</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.fullscreen.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </fullscreen>
                     <geolocation>
-                        <TCEforms>
-                            <label>geolocation</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.geolocation.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>geolocation</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.geolocation.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </geolocation>
                     <gyroscope>
-                        <TCEforms>
-                            <label>gyroscope</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.gyroscope.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>gyroscope</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.gyroscope.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </gyroscope>
                     <magnetometer>
-                        <TCEforms>
-                            <label>magnetometer</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.magnetometer.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>magnetometer</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.magnetometer.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </magnetometer>
                     <microphone>
-                        <TCEforms>
-                            <label>microphone</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.microphone.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>microphone</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.microphone.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </microphone>
                     <midi>
-                        <TCEforms>
-                            <label>midi</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.midi.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>midi</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.midi.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </midi>
                     <payment>
-                        <TCEforms>
-                            <label>payment</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.payment.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>payment</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.payment.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </payment>
                     <pictureInPicture>
-                        <TCEforms>
-                            <label>picture-in-picture</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.picture-in-picture.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>picture-in-picture</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.picture-in-picture.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </pictureInPicture>
                     <speaker>
-                        <TCEforms>
-                            <label>speaker</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.speaker.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>speaker</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.speaker.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </speaker>
                     <syncXhr>
-                        <TCEforms>
-                            <label>sync-xhr</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.sync-xhr.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>sync-xhr</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.sync-xhr.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </syncXhr>
                     <usb>
-                        <TCEforms>
-                            <label>usb</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.usb.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>usb</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.usb.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </usb>
                     <vibrate>
-                        <TCEforms>
-                            <label>vibrate</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.vibrate.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>vibrate</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.vibrate.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </vibrate>
                     <vr>
-                        <TCEforms>
-                            <label>vr</label>
-                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.vr.description</description>
-                            <config>
-                                <type>text</type>
-                                <eval>trim</eval>
-                                <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>vr</label>
+                        <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.permissions_policy.vr.description</description>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                            <placeholder>self 'https://example.com' 'https://subdomain.example.com'</placeholder>
+                        </config>
                     </vr>
                 </el>
             </ROOT>
