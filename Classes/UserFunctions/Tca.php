@@ -1,6 +1,6 @@
 <?php
 
-namespace LimeSoda\LsSecurityHeaders\Userfuncs;
+namespace LimeSoda\LsSecurityHeaders\UserFunctions;
 
 use TYPO3\CMS\Core\Site\Entity\Site;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
