@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Migrate to `security/ignorePageTypeRestriction` flag in TCA
+- Migrate and improve TCA configuration
 
 ### Removed
 - Remove obsolete TCEforms tag from FlexForms

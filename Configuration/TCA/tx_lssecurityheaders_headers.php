@@ -1,5 +1,7 @@
 <?php
 
+use LimeSoda\LsSecurityHeaders\UserFunctions\Tca;
+
 defined('TYPO3') || die();
 
 $lll = 'LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:';
@@ -7,10 +9,9 @@ $lll = 'LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf
 return [
     'ctrl' => [
         'label' => 'uid',
-        'label_userFunc' => \LimeSoda\LsSecurityHeaders\Userfuncs\Tca::class . '->securityHeaderTitle',
+        'label_userFunc' => Tca::class . '->securityHeaderTitle',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
-        'cruser_id' => 'cruser_id', // @TODO remove for Typo3 13 as it's no longer evaluated
         'title' => $lll . 'tx_lssecurityheaders_headers',
         'delete' => 'deleted',
         'versioningWS' => false,
@@ -87,20 +88,18 @@ return [
                 'renderType' => 'checkboxToggle',
                 'items' => [
                     [
-                        0 => '',
-                        1 => '',
+                        'label' => '',
+                        'value' => '',
                         'invertStateDisplay' => true
                     ]
                 ],
             ]
         ],
         'starttime' => [
-            // @TODO migrate to datetime field for Typo3 13
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
             'config' => [
-                'type' => 'input',
-                'renderType' => 'inputDateTime',
-                'eval' => 'datetime,int',
+                'type' => 'datetime',
+                'format' => 'date',
                 'default' => 0,
                 'behaviour' => [
                     'allowLanguageSynchronization' => true,
@@ -108,12 +107,10 @@ return [
             ]
         ],
         'endtime' => [
-            // @TODO migrate to datetime field for Typo3 13
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
             'config' => [
-                'type' => 'input',
-                'renderType' => 'inputDateTime',
-                'eval' => 'datetime,int',
+                'type' => 'datetime',
+                'format' => 'date',
                 'default' => 0,
                 'range' => [
                     'upper' => mktime(0, 0, 0, 1, 1, 2038),
@@ -154,15 +151,15 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['', '',],
-                    ['no-referrer', 'no-referrer',],
-                    ['no-referrer-when-downgrade', 'no-referrer-when-downgrade',],
-                    ['same-origin', 'same-origin',],
-                    ['origin', 'origin',],
-                    ['strict-origin', 'strict-origin',],
-                    ['origin-when-cross-origin', 'origin-when-cross-origin',],
-                    ['strict-origin-when-cross-origin', 'strict-origin-when-cross-origin',],
-                    ['unsafe-url', 'unsafe-url',],
+                    ['label' => '', 'value' => ''],
+                    ['label' => 'no-referrer', 'value' => 'no-referrer'],
+                    ['label' => 'no-referrer-when-downgrade', 'value' => 'no-referrer-when-downgrade'],
+                    ['label' => 'same-origin', 'value' => 'same-origin'],
+                    ['label' => 'origin', 'value' => 'origin'],
+                    ['label' => 'strict-origin', 'value' => 'strict-origin'],
+                    ['label' => 'origin-when-cross-origin', 'value' => 'origin-when-cross-origin'],
+                    ['label' => 'strict-origin-when-cross-origin', 'value' => 'strict-origin-when-cross-origin'],
+                    ['label' => 'unsafe-url', 'value' => 'unsafe-url'],
                 ],
             ],
         ],
@@ -183,9 +180,9 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['', '',],
-                    ['SAMEORIGIN', 'SAMEORIGIN',],
-                    ['DENY', 'DENY',],
+                    ['label' => '', 'value' => ''],
+                    ['label' => 'SAMEORIGIN', 'value' => 'SAMEORIGIN'],
+                    ['label' => 'DENY', 'value' => 'DENY'],
                 ],
             ],
         ],
