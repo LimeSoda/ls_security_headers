@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Add support for nonce attribute output in `generateNonce` method
+- Add site set
 
 ### Changed
 - Migrate to `security/ignorePageTypeRestriction` flag in TCA
