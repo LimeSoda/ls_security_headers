@@ -4,10 +4,12 @@
 
 lib.cspNonce = USER_INT
 lib.cspNonce {
-    userFunc = LimeSoda\LsSecurityHeaders\Userfuncs\Csp->generateNonce
+    userFunc = LimeSoda\LsSecurityHeaders\UserFunctions\Csp->generateNonce
 
     length = TEXT
     length.field = length
     policy = TEXT
     policy.field = policy
+    asAttribute = TEXT
+    asAttribute.field = asAttribute
 }

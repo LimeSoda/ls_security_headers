@@ -1,41 +1,28 @@
 <?php
 
-namespace LimeSoda\LsSecurityHeaders\Userfuncs;
+namespace LimeSoda\LsSecurityHeaders\UserFunctions;
 
-use TYPO3\CMS\Core\Site\Entity\Site;
-use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
+use Psr\Http\Message\ServerRequestInterface;
 
 class Csp
 {
-    /**
-     * @var ContentObjectRenderer
-     */
-    private ContentObjectRenderer $cObj;
-
-    /**
-     * @param ContentObjectRenderer $cObj
-     * @return void
-     */
-    public function setContentObjectRenderer(ContentObjectRenderer $cObj): void
+    public function generateNonce(string $_, array $conf, ServerRequestInterface $request): string
     {
-        $this->cObj = $cObj;
-    }
+        if ($conf['asAttribute'] === '1') {
+            $length = $conf['length'];
+            $policy = $conf['policy'];
+        } else {
+            $length = $request->getAttribute('currentContentObject')->cObjGetSingle($conf['length'], $conf['length.']);
+            $policy = $request->getAttribute('currentContentObject')->cObjGetSingle($conf['policy'], $conf['policy.']);
+        }
 
-    /**
-     * @param string $_
-     * @param array $conf
-     * @return string
-     * @throws \Exception
-     */
-    public function generateNonce(string $_, array $conf): string
-    {
-        $length = $this->cObj->cObjGetSingle($conf['length'], $conf['length.']);
-        $policy = $this->cObj->cObjGetSingle($conf['policy'], $conf['policy.']);
-
-        $nonce = bin2hex(random_bytes($length));
+        $nonce = bin2hex(random_bytes($length ?? 32));
 
         $GLOBALS['LS_SECURITY_HEADERS']['CSP_NONCE'][$policy][] = $nonce;
+
+        if ($conf['asAttribute'] === '1') {
+            return " nonce=\"$nonce\"";
+        }
 
         return $nonce;
     }
