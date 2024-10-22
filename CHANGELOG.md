@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Migrate and improve TCA configuration
 - Rename `Userfuncs` namespace to `UserFunctions`
 - Migrate to constructor injection and `Connection` class in `SecurityHeadersMiddleware`
+- Migrate and restructure language file
 
 ### Removed
 - Remove obsolete TCEforms tag from FlexForms

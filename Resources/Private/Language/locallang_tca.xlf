@@ -1,165 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" datatype="plaintext"
-          original="EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf" date="2022-11-02T13:37:00Z"
-          product-name="ls_security_headers">
-        <header/>
+<xliff version="1.2" xmlns:t3="http://typo3.org/schemas/xliff" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" original="EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf" datatype="plaintext" product-name="ls_security_headers" date="2024-10-18T13:06:19+02:00">
+        <header></header>
         <body>
-            <trans-unit id="tx_lssecurityheaders_headers" xml:space="preserve">
-				<source>Security Headers</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.referrer_policy" xml:space="preserve">
-				<source>Referrer-Policy</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.referrer_policy.description" xml:space="preserve">
-				<source>The Referrer-Policy HTTP header controls how much referrer information (sent with the Referer header) should be included with requests.</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.http_strict_transport_security"
-                        xml:space="preserve">
-				<source>HTTP Strict Transport Security (HSTS)</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.http_strict_transport_security.description"
-                        xml:space="preserve">
-				<source>The HTTP Strict-Transport-Security response header (often abbreviated as HSTS) informs browsers that the site should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be converted to HTTPS. E.g. max-age=<![CDATA[<expire-time>]]>; includeSubDomains</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.x_frame_options" xml:space="preserve">
-				<source>X-Frame Options</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.x_frame_options.description" xml:space="preserve">
-				<source>The X-Frame-Options HTTP response header can be used to indicate whether or not a browser should be allowed to render a page in a <![CDATA[<frame>, <iframe>, <embed> or <object>]]>. Sites can use this to avoid click-jacking attacks, by ensuring that their content is not embedded into other sites.</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.x_xss_protection" xml:space="preserve">
-				<source>X-XSS-Protection</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.x_xss_protection.description" xml:space="preserve">
-				<source>The HTTP X-XSS-Protection response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. These protections are largely unnecessary in modern browsers when sites implement a strong Content-Security-Policy that disables the use of inline JavaScript ('unsafe-inline'). E.g. 1; mode=block</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy" xml:space="preserve">
-				<source>Content Security Policy (CSP)</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.description"
-                        xml:space="preserve">
-				<source>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross-Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft, to site defacement, to malware distribution.</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.default-src.description"
-                        xml:space="preserve">
-				<source>Define loading policy for all resources type in case of a resource type dedicated directive is not defined (fallback). E.g. 'self' https://onlysecure.example.com</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.script-src.description"
-                        xml:space="preserve">
-				<source>Define which scripts the protected resource can execute. E.g. 'self' 'unsafe-eval' 'unsafe-inline' blob: example.com *.example.com https://onlysecure.example.com</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.object-src.description"
-                        xml:space="preserve">
-				<source>Define from where the protected resource can load plugins. E.g. https://example.com</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.style-src.description"
-                        xml:space="preserve">
-				<source>Define which styles (CSS) the user applies to the protected resource. E.g. 'self' 'unsafe-inline' example.com *.example.com https://onlysecure.example.com</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.img-src.description"
-                        xml:space="preserve">
-				<source>Define from where the protected resource can load images. E.g. 'self' data: example.com *.example.com https://onlysecure.example.com</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.media-src.description"
-                        xml:space="preserve">
-				<source>Define from where the protected resource can load video and audio. E.g. https://example.com</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.frame-src.description"
-                        xml:space="preserve">
-				<source>Define from where the protected resource can embed frames. E.g. 'self' 'unsafe-inline' example.com *.example.com https://onlysecure.example.com</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.font-src.description"
-                        xml:space="preserve">
-				<source>Define from where the protected resource can load fonts. E.g. 'self' data: example.com *.example.com https://onlysecure.example.com</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.connect-src.description"
-                        xml:space="preserve">
-				<source>Define which URIs the protected resource can load using script interfaces. E.g. 'self' example.com *.example.com https://onlysecure.example.com</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.form-src.description"
-                        xml:space="preserve">
-				<source>Define which URIs can be used as the action of HTML form elements. E.g. 'none'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy" xml:space="preserve">
-				<source>Permissions Policy</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.description"
-                        xml:space="preserve">
-				<source>The HTTP Permissions Policy header provides a mechanism to allow and deny the use of browser features in its own frame, and in content within any <![CDATA[<iframe>]]> elements in the document.</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.accelerometer.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.ambient-light-sensor.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.autoplay.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.camera.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.encrypted-media.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.fullscreen.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.geolocation.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.gyroscope.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.magnetometer.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.microphone.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.midi.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.payment.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.picture-in-picture.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.speaker.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.sync-xhr.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.usb.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.vibrate.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
-            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.vr.description"
-                        xml:space="preserve">
-				<source>E.g. self 'https://example.com' 'https://subdomain.example.com'</source>
-			</trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers" resname="tx_lssecurityheaders_headers">
+                <source>Security Headers</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy" resname="tx_lssecurityheaders_headers.content_security_policy">
+                <source>Content Security Policy (CSP)</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.connect-src.description" resname="tx_lssecurityheaders_headers.content_security_policy.connect-src.description">
+                <source>Define which URIs the protected resource can load using script interfaces. E.g. &#39;self&#39; example.com *.example.com https://onlysecure.example.com</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.default-src.description" resname="tx_lssecurityheaders_headers.content_security_policy.default-src.description">
+                <source>Define loading policy for all resources type in case of a resource type dedicated directive is not defined (fallback). E.g. &#39;self&#39; https://onlysecure.example.com</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.description" resname="tx_lssecurityheaders_headers.content_security_policy.description">
+                <source>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross-Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft, to site defacement, to malware distribution.</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.font-src.description" resname="tx_lssecurityheaders_headers.content_security_policy.font-src.description">
+                <source>Define from where the protected resource can load fonts. E.g. &#39;self&#39; data: example.com *.example.com https://onlysecure.example.com</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.form-src.description" resname="tx_lssecurityheaders_headers.content_security_policy.form-src.description">
+                <source>Define which URIs can be used as the action of HTML form elements. E.g. &#39;none&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.frame-src.description" resname="tx_lssecurityheaders_headers.content_security_policy.frame-src.description">
+                <source>Define from where the protected resource can embed frames. E.g. &#39;self&#39; &#39;unsafe-inline&#39; example.com *.example.com https://onlysecure.example.com</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.img-src.description" resname="tx_lssecurityheaders_headers.content_security_policy.img-src.description">
+                <source>Define from where the protected resource can load images. E.g. &#39;self&#39; data: example.com *.example.com https://onlysecure.example.com</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.media-src.description" resname="tx_lssecurityheaders_headers.content_security_policy.media-src.description">
+                <source>Define from where the protected resource can load video and audio. E.g. https://example.com</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.object-src.description" resname="tx_lssecurityheaders_headers.content_security_policy.object-src.description">
+                <source>Define from where the protected resource can load plugins. E.g. https://example.com</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.script-src.description" resname="tx_lssecurityheaders_headers.content_security_policy.script-src.description">
+                <source>Define which scripts the protected resource can execute. E.g. &#39;self&#39; &#39;unsafe-eval&#39; &#39;unsafe-inline&#39; blob: example.com *.example.com https://onlysecure.example.com</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.style-src.description" resname="tx_lssecurityheaders_headers.content_security_policy.style-src.description">
+                <source>Define which styles (CSS) the user applies to the protected resource. E.g. &#39;self&#39; &#39;unsafe-inline&#39; example.com *.example.com https://onlysecure.example.com</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.http_strict_transport_security" resname="tx_lssecurityheaders_headers.http_strict_transport_security">
+                <source>HTTP Strict Transport Security (HSTS)</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.http_strict_transport_security.description" resname="tx_lssecurityheaders_headers.http_strict_transport_security.description">
+                <source>The HTTP Strict-Transport-Security response header (often abbreviated as HSTS) informs browsers that the site should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be converted to HTTPS. E.g. max-age=&lt;expire-time&gt;; includeSubDomains</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy" resname="tx_lssecurityheaders_headers.permissions_policy">
+                <source>Permissions Policy</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.accelerometer.description" resname="tx_lssecurityheaders_headers.permissions_policy.accelerometer.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.ambient-light-sensor.description" resname="tx_lssecurityheaders_headers.permissions_policy.ambient-light-sensor.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.autoplay.description" resname="tx_lssecurityheaders_headers.permissions_policy.autoplay.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.camera.description" resname="tx_lssecurityheaders_headers.permissions_policy.camera.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.description" resname="tx_lssecurityheaders_headers.permissions_policy.description">
+                <source>The HTTP Permissions Policy header provides a mechanism to allow and deny the use of browser features in its own frame, and in content within any &lt;iframe&gt; elements in the document.</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.encrypted-media.description" resname="tx_lssecurityheaders_headers.permissions_policy.encrypted-media.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.fullscreen.description" resname="tx_lssecurityheaders_headers.permissions_policy.fullscreen.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.geolocation.description" resname="tx_lssecurityheaders_headers.permissions_policy.geolocation.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.gyroscope.description" resname="tx_lssecurityheaders_headers.permissions_policy.gyroscope.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.magnetometer.description" resname="tx_lssecurityheaders_headers.permissions_policy.magnetometer.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.microphone.description" resname="tx_lssecurityheaders_headers.permissions_policy.microphone.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.midi.description" resname="tx_lssecurityheaders_headers.permissions_policy.midi.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.payment.description" resname="tx_lssecurityheaders_headers.permissions_policy.payment.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.picture-in-picture.description" resname="tx_lssecurityheaders_headers.permissions_policy.picture-in-picture.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.speaker.description" resname="tx_lssecurityheaders_headers.permissions_policy.speaker.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.sync-xhr.description" resname="tx_lssecurityheaders_headers.permissions_policy.sync-xhr.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.usb.description" resname="tx_lssecurityheaders_headers.permissions_policy.usb.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.vibrate.description" resname="tx_lssecurityheaders_headers.permissions_policy.vibrate.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.permissions_policy.vr.description" resname="tx_lssecurityheaders_headers.permissions_policy.vr.description">
+                <source>E.g. self &#39;https://example.com&#39; &#39;https://subdomain.example.com&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.referrer_policy" resname="tx_lssecurityheaders_headers.referrer_policy">
+                <source>Referrer-Policy</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.referrer_policy.description" resname="tx_lssecurityheaders_headers.referrer_policy.description">
+                <source>The Referrer-Policy HTTP header controls how much referrer information (sent with the Referer header) should be included with requests.</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.x_frame_options" resname="tx_lssecurityheaders_headers.x_frame_options">
+                <source>X-Frame Options</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.x_frame_options.description" resname="tx_lssecurityheaders_headers.x_frame_options.description">
+                <source>The X-Frame-Options HTTP response header can be used to indicate whether or not a browser should be allowed to render a page in a &lt;frame&gt;, &lt;iframe&gt;, &lt;embed&gt; or &lt;object&gt;. Sites can use this to avoid click-jacking attacks, by ensuring that their content is not embedded into other sites.</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.x_xss_protection" resname="tx_lssecurityheaders_headers.x_xss_protection">
+                <source>X-XSS-Protection</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.x_xss_protection.description" resname="tx_lssecurityheaders_headers.x_xss_protection.description">
+                <source>The HTTP X-XSS-Protection response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. These protections are largely unnecessary in modern browsers when sites implement a strong Content-Security-Policy that disables the use of inline JavaScript (&#39;unsafe-inline&#39;). E.g. 1; mode=block</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
