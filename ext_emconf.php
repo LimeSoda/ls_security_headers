@@ -9,11 +9,11 @@ $EM_CONF[$_EXTKEY] = [
     'author_company' => 'LimeSoda Interactive Marketing GmbH',
     'state' => 'stable',
     'clearCacheOnLoad' => true,
-    'version' => '1.3.1',
+    'version' => '2.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '11.5.0-12.9.99',
-            'php' => '7.4.0-8.2.99',
+            'typo3' => '13.4.0-13.4.99',
+            'php' => '8.2.0-8.3.99',
         ],
         'conflicts' => [],
         'suggests' => [],
