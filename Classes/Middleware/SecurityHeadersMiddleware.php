@@ -4,30 +4,23 @@ declare(strict_types=1);
 
 namespace LimeSoda\LsSecurityHeaders\Middleware;
 
-use Doctrine\DBAL\DBALException;
-use Doctrine\DBAL\Driver\Exception;
+use Doctrine\DBAL\Exception;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
+use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Service\FlexFormService;
 use TYPO3\CMS\Core\Site\Entity\Site;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-class SecurityHeadersMiddleware implements MiddlewareInterface
+final class SecurityHeadersMiddleware implements MiddlewareInterface
 {
-    /**
-     * @var FlexFormService
-     */
-    protected $flexFormService;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
+    public function __construct(
+        private readonly FlexFormService $flexFormService
+    )
     {
-        $this->flexFormService = GeneralUtility::makeInstance(FlexFormService::class);
     }
 
     public function process(
@@ -111,7 +104,6 @@ class SecurityHeadersMiddleware implements MiddlewareInterface
     /**
      * @param int $rootPageId
      * @return string[]
-     * @throws DBALException
      * @throws Exception
      */
     public
@@ -125,7 +117,7 @@ class SecurityHeadersMiddleware implements MiddlewareInterface
             ->where(
                 $qb->expr()->eq(
                     'pid',
-                    $qb->createNamedParameter($rootPageId, \PDO::PARAM_INT)
+                    $qb->createNamedParameter($rootPageId, Connection::PARAM_INT)
                 )
             )
             ->setMaxResults(1);
