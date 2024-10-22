@@ -23,7 +23,10 @@ return [
         ],
         'typeicon_classes' => [
             'default' => 'actions-shield',
-        ]
+        ],
+        'security' => [
+            'ignorePageTypeRestriction' => true
+        ],
     ],
     'types' => [
         '1' => [
