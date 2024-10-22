@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 - Remove obsolete TCEforms tag from FlexForms
+- Remove obsolete `ext_tables.sql` file
 
 ## [1.3.2] - 27-08-2024
 
