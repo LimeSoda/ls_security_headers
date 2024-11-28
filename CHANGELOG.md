@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.0] - 28-11-2024
+
+### Added
+- Add support for frame-ancestors CSP directive
+
 ## [2.0.0] - 22-10-2024
 
 ### Added
