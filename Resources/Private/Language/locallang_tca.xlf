@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns:t3="http://typo3.org/schemas/xliff" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" original="EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf" datatype="plaintext" product-name="ls_security_headers" date="2024-10-18T13:06:19+02:00">
+    <file source-language="en" original="EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf" datatype="plaintext" product-name="ls_security_headers" date="2024-11-28T13:30:38+01:00">
         <header></header>
         <body>
             <trans-unit id="tx_lssecurityheaders_headers" resname="tx_lssecurityheaders_headers">
@@ -23,6 +23,9 @@
             </trans-unit>
             <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.form-src.description" resname="tx_lssecurityheaders_headers.content_security_policy.form-src.description">
                 <source>Define which URIs can be used as the action of HTML form elements. E.g. &#39;none&#39;</source>
+            </trans-unit>
+            <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.frame-ancestors.description" resname="tx_lssecurityheaders_headers.content_security_policy.frame-ancestors.description">
+                <source>Define valid parents that may embed this page. E.g. &#39;none&#39; &#39;self&#39; example.com *.example.com https://onlysecure.example.com</source>
             </trans-unit>
             <trans-unit id="tx_lssecurityheaders_headers.content_security_policy.frame-src.description" resname="tx_lssecurityheaders_headers.content_security_policy.frame-src.description">
                 <source>Define from where the protected resource can embed frames. E.g. &#39;self&#39; &#39;unsafe-inline&#39; example.com *.example.com https://onlysecure.example.com</source>
