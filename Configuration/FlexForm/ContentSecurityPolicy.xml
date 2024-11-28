@@ -86,6 +86,17 @@
                             </config>
                         </TCEforms>
                     </frameSrc>
+                    <frameAncestors>
+                        <TCEforms>
+                            <label>frame-ancestors</label>
+                            <description>LLL:EXT:ls_security_headers/Resources/Private/Language/locallang_tca.xlf:tx_lssecurityheaders_headers.content_security_policy.frame-ancestors.description</description>
+                            <config>
+                                <type>text</type>
+                                <eval>trim</eval>
+                                <placeholder>'none' 'self' example.com *.example.com https://onlysecure.example.com</placeholder>
+                            </config>
+                        </TCEforms>
+                    </frameAncestors>
                     <fontSrc>
                         <TCEforms>
                             <label>font-src</label>
